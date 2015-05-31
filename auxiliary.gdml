@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+ 
+ <extension>
+      <color name="blue" R="0"  G="0.0"  B="1.0"  A="1.0" />
+      <color name="red" R="1.0"  G="0"  B="0"  A="1.0" /> 
+      <color name="green" R="0"  G="1"  B="0"  A="1.0" />
+      <color name="orange" R="0.5"  G="0"  B="0"  A="1.0" />
+      <color name="cyan" R="0"  G="0"  B="0.5"  A="1.0" />	
+ </extension>
+ 
+ <define>
+  <constant name="earthRadius" value="100"/>
+  <constant name="tropMax" value="12"/>	
+  <constant name="stratMax" value="55"/>
+  <constant name="mesoMax" value="85"/>
+  <constant name="thermoMax" value="700"/>
+  <constant name="exoMax" value="1000"/>
+  <constant name="startAzimuth" value="0"/>
+  <constant name="endAzimuth" value="360"/>
+  <constant name="startPolar" value="0" />
+  <constant name="endPolar" value="360"/>
+  <constant name="detectorRadius" value="5"/>
+  <constant name="detectorHeight" value="10"/>
+  <matrix name="detPos" coldim="3" values="earthRadius+0.5*detectorHeight 0 0"/>
+  <position name="earthCenter" unit="km" x="0" y="0" z="0" />
+  <position name="detectorCenter" unit="km" x="detPos[1]*sin(detPos[2])*cos(detPos[3])" y="detPos[1]*sin(detPos[2])*sin(detPos[3])" z="detPos[1]*cos(detPos[2])" />
+  <rotation name="detectorRotation" unit="deg" values="0 -detPos[2] -detPos[3]"/>
+ </define>
+
+ <materials>
+
+   <element name="Hydrogen" formula="H" Z="1."> <atom value="1.01"/>
+  </element>
+  <element name="Oxygen" formula="O" Z="8."> <atom value="16.0"/>
+  </element>
+  <element name="Nitrogen" formula="N" Z="7."> <atom value="14.01"/>
+  </element>
+  <element name="Carbon" formula="C" Z="6"> <atom value="12.011"/>
+  </element>
+  <material name="Al" Z="13.0">
+   <D value="2.70"/> <atom value="26.98"/>
+  </material>
+  <material name="Ethyl Alcohol" formula="C2H5OH">
+   <D value="0.000085" unit="g/cm3"/>
+   <composite n="6" ref="Hydrogen"/>
+   <composite n="1" ref="Oxygen"/>
+   <composite n="2" ref="Carbon"/>
+  </material>
+
+
+  <material Z="7" formula=" " name="Nitrogen" >
+   <D value="0.00125" unit="g/cm3"/>
+   <atom value="14.01" />
+  </material>
+  <material Z="1" formula=" " name="Hydrogen" >
+   <D value="0.000089" unit="g/cm3"/>
+   <atom value="1.008" />
+  </material>
+  <material Z="2" formula=" " name="Helium" >
+   <D value="0.0001786" unit="g/cm3"/>
+   <atom value="4.002" />
+  </material>
+  <material Z="6" formula=" " name="Carbon" >
+   <D value="0.0001786" unit="g/cm3"/>
+   <atom value="12.011" />
+  </material>
+
+  <material Z="8" formula=" " name="Oxygen" >
+   <D value="0.001429" unit="g/cm3"/>
+   <atom value="16.0" />
+  </material>
+  
+
+<!--
+  <material formula=" " name="exosphereMat">
+   <D value="0.000000000000001" unit="g/cm3"/>
+   <fraction n="0.6" ref="Hydrogen" />
+   <fraction n="0.3" ref="Helium" />
+   <fraction n="0.07" ref="Nitrogen" />
+   <fraction n="0.03" ref="Oxygen" />
+  </material>
+  <material formula=" " name="thermosphereMat">
+   <D value="0.00000000001" unit="g/cm3"/>
+   <fraction n="0.4" ref="Hydrogen" />
+   <fraction n="0.2" ref="Helium" />
+   <fraction n="0.28" ref="Nitrogen" />
+   <fraction n="0.12" ref="Oxygen" />
+  </material>-->
+
+
+  <material formula=" " name="mesosphereMat">
+   <D value="0.0000125" unit="g/cm3"/>
+   <fraction n="0.05" ref="Hydrogen" />
+   <fraction n="0.05" ref="Helium" />
+   <fraction n="0.78" ref="Nitrogen" />
+   <fraction n="0.21" ref="Oxygen" />
+  </material>
+  <material formula=" " name="stratosphereMat">
+   <D value="0.000125" unit="g/cm3"/>
+   <fraction n="0.05" ref="Hydrogen" />
+   <fraction n="0.05" ref="Helium" />
+   <fraction n="0.78" ref="Nitrogen" />
+   <fraction n="0.21" ref="Oxygen" />
+  </material>
+  <material formula=" " name="troposphereMat">
+   <D value="0.00125" unit="g/cm3"/>
+   <fraction n="0.05" ref="Hydrogen"/>
+   <fraction n="0.05" ref="Helium"/>
+   <fraction n="0.78" ref="Nitrogen"/>
+   <fraction n="0.21" ref="Oxygen"/>
+  </material> 
+
+   <material Z="1" name="Vacuum" state="gas">
+       <T unit="K" value="2.73"/>
+       <P unit="pascal" value="3e-18"/>
+       <D unit="g/cm3" value="1e-25"/>
+       <atom unit="g/mole" value="1.01"/>
+    </material>
+ </materials>
+
+ <solids>
+  <sphere name="troposphereSol" lunit="km" aunit="deg" rmin="earthRadius" rmax="earthRadius+tropMax" starttheta="startPolar" deltatheta="endPolar" startphi="startAzimuth" deltaphi="endAzimuth"/>
+  <sphere name="stratosphereSol" lunit="km" aunit="deg" rmin="earthRadius+tropMax" rmax="earthRadius+stratMax" starttheta="startPolar" deltatheta="endPolar" startphi="startAzimuth" deltaphi="endAzimuth"/>
+  <sphere name="mesosphereSol" lunit="km" aunit="deg" rmin="earthRadius+stratMax" rmax="earthRadius+mesoMax" starttheta="startPolar" deltatheta="endPolar" startphi="startAzimuth" deltaphi="endAzimuth"/>
+  <!--<sphere name="thermosphereSol" lunit="km" aunit="deg" rmin="earthRadius+mesoMax" rmax="earthRadius+thermoMax" starttheta="startPolar" deltatheta="endPolar" startphi="startAzimuth" deltaphi="endAzimuth"/>
+  <sphere name="exosphereSol" lunit="km" aunit="deg" rmin="earthRadius+thermoMax" rmax="earthRadius+exoMax" starttheta="startPolar" deltatheta="endPolar" startphi="startAzimuth" deltaphi="endAzimuth"/>-->
+  <tube name="cloudChamberSol" lunit="km" aunit="deg" rmin="0" rmax="detectorRadius" z="detectorHeight" startphi="0" deltaphi="360"/>  
+  <box name="universeSol" lunit="km" x="20000" y="20000" z="20000" />
+ </solids>
+
+ <structure>
+  <volume name="troposphereVol" >
+   <materialref ref="troposphereMat" />
+   <solidref ref="troposphereSol" />
+   <colorref ref="green"/>
+   <auxiliary auxtype="Color" auxvalue="Green"/>
+  </volume>
+  <volume name="stratosphereVol" >
+   <materialref ref="stratosphereMat" />
+   <solidref ref="stratosphereSol" />
+   <colorref ref="red"/>
+   <auxiliary auxtype="Color" auxvalue="Red"/>
+  </volume>
+  <volume name="mesosphereVol" >
+   <materialref ref="mesosphereMat" />
+   <solidref ref="mesosphereSol" />
+   <colorref ref="blue"/>
+   <auxiliary auxtype="Color" auxvalue="Blue"/>
+  </volume>
+  <volume name="cloudChamberVol">
+   <materialref ref="Vacuum"/>
+   <solidref ref="cloudChamberSol"/>
+   <!--<colorref ref="red"/>-->
+   <auxiliary auxtype="Color" auxvalue="Red"/>
+  </volume>  
+
+
+  <!--<volume name="thermosphereVol" >
+   <materialref ref="Air" />
+   <solidref ref="thermosphereSol" />
+   <colorref ref="orange"/>
+   <auxiliary auxtype="Color" auxvalue="Orange"/>
+  </volume>
+   
+  <volume name="exosphereVol" >
+   <materialref ref="Air" />
+   <solidref ref="exosphereSol" />
+   <colorref ref="green"/>
+   <auxiliary auxtype="Color" auxvalue="Green"/>
+  </volume>-->
+  
+
+  <volume name="universeVol" >
+   <materialref ref="Vacuum" />
+   <solidref ref="universeSol" />
+   <physvol>
+    <volumeref ref="troposphereVol" />
+    <positionref ref="earthCenter"  />
+   </physvol>
+   <physvol>
+    <volumeref ref="stratosphereVol" />
+    <positionref ref="earthCenter"  />
+   </physvol>
+   <physvol>
+    <volumeref ref="mesosphereVol" />
+    <positionref ref="earthCenter"  />
+   </physvol>
+   <physvol>
+    <volumeref ref= "cloudChamberVol"/>
+    <positionref ref="detectorCenter"/>
+    <rotation ref="detectorRotation"/>
+   </physvol>
+   
+<!--
+<physvol>
+    <volumeref ref="thermosphereVol" />
+    <positionref ref="earthCenter"  />
+   </physvol>
+   <physvol>
+    <volumeref ref="exosphereVol" />
+    <positionref ref="earthCenter"  />
+   </physvol>
+-->
+ 
+ </volume>
+
+  
+ </structure>
+
+ <setup name="Default" version="1.0" >
+  <world ref="universeVol" />
+ </setup>
+</gdml>
