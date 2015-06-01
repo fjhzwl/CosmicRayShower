@@ -44,7 +44,7 @@
 #include "G4TransportationManager.hh"
 #include "G4SDManager.hh"
 
-#include "cosmicsPrimaryGeneratorAction.hh"
+#include "cosmicsEventGenerator.hh"
 #include "cosmicsDetectorConstruction.hh"
 #include "cosmicsPhysicsList.hh"
 #include "cosmicsSensitiveDetector.hh"

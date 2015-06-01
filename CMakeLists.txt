@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------------
 # Setup the project
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-project(G04)
+project(cosmics)
 
 #----------------------------------------------------------------------------
 # Find Geant4 package, activating all available Vis drivers by default
@@ -31,8 +31,8 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 #----------------------------------------------------------------------------
 # Add the executable, and link it to the Geant4 libraries
 #
-add_executable(gdml_det gdml_det.cc ${sources} ${headers})
-target_link_libraries(gdml_det ${Geant4_LIBRARIES} )
+add_executable(cosmicRayShower cosmicRayShower.cc ${sources} ${headers})
+target_link_libraries(cosmicRayShower ${Geant4_LIBRARIES} )
 
 #----------------------------------------------------------------------------
 # Copy all scripts to the build directory, i.e. the directory in which we
@@ -40,7 +40,7 @@ target_link_libraries(gdml_det ${Geant4_LIBRARIES} )
 # relies on these scripts being in the current working directory.
 #
 set(G04_SCRIPTS
-    auxiliary.gdml g04.mac vis.mac
+    auxiliary.gdml
   )
 
 foreach(_script ${G04_SCRIPTS})
@@ -55,10 +55,10 @@ endforeach()
 # Add program to the project targets
 # (this avoids the need of typing the program name after make)
 #
-add_custom_target(G04 DEPENDS gdml_det)
+add_custom_target(cosmics DEPENDS cosmicRayShower)
 
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS gdml_det DESTINATION bin)
+install(TARGETS cosmicRayShower DESTINATION bin)
 
