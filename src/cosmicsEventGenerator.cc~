@@ -12,7 +12,8 @@
 #include "G4SystemOfUnits.hh"
 
 cosmicsEventGenerator::cosmicsEventGenerator()
- : G4VUserPrimaryGeneratorAction()
+ : G4VUserPrimaryGeneratorAction(), 
+   fParticleGun(0)
 {
   cosmicsGun = new G4GeneralParticleSource();
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();

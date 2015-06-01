@@ -17,7 +17,7 @@ cosmicsPhysicsList::cosmicsPhysicsList()
 cosmicsPhysicsList::~cosmicsPhysicsList()
 {;}
 
-void cosmicsPhysicsList::ConstructEM()
+/*void cosmicsPhysicsList::ConstructEM()
 {
   theParticleIterator->reset();
   while ( (*theParticleIterator) () ){
@@ -31,7 +31,7 @@ void cosmicsPhysicsList::ConstructEM()
       pmanager->AddProcess(new G4MuPairProduction, -1, 4, 4);
     }
   }
-}
+}*/
 
 void cosmicsPhysicsList::ConstructLeptons()
 {
@@ -51,7 +51,7 @@ void cosmicsPhysicsList::ConstructParticle()
 void cosmicsPhysicsList::ConstructProcess()
 {
   AddTransportation();
-  ConstructEM();
+  //ConstructEM();
 }
 
 

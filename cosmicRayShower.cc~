@@ -44,7 +44,7 @@
 #include "G4TransportationManager.hh"
 #include "G4SDManager.hh"
 
-#include "cosmicsPrimaryGeneratorAction.hh"
+#include "cosmicsEventGenerator.hh"
 #include "cosmicsDetectorConstruction.hh"
 #include "cosmicsPhysicsList.hh"
 #include "cosmicsSensitiveDetector.hh"
@@ -76,13 +76,13 @@ int main(int argc,char **argv)
    G4GDMLParser parser;
    parser.Read(argv[1]);
 
-   
+   G4cout << "Hello" << G4endl;
    G4RunManager* runManager = new G4RunManager;
 
    runManager->SetUserInitialization(new cosmicsDetectorConstruction(
                                      parser.GetWorldVolume()));
    runManager->SetUserInitialization(new cosmicsPhysicsList);
-   runManager->SetUserAction(new cosmicsPrimaryGeneratorAction);
+   runManager->SetUserAction(new cosmicsEventGenerator);
 
    runManager->Initialize();
 

@@ -76,16 +76,18 @@ int main(int argc,char **argv)
    G4GDMLParser parser;
    parser.Read(argv[1]);
 
-   
+   G4cout << "Hello1" << G4endl;
    G4RunManager* runManager = new G4RunManager;
-
+   G4cout << "Hello2" << G4endl;
    runManager->SetUserInitialization(new cosmicsDetectorConstruction(
                                      parser.GetWorldVolume()));
+   G4cout << "Hello3" << G4endl;
    runManager->SetUserInitialization(new cosmicsPhysicsList);
-   runManager->SetUserAction(new cosmicsPrimaryGeneratorAction);
-
+   G4cout << "Hello4" << G4endl;
+   runManager->SetUserAction(new cosmicsEventGenerator);
+   G4cout << "Hello5" << G4endl;
    runManager->Initialize();
-
+   G4cout << "Hello6" << G4endl;
    G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
    //------------------------------------------------ 

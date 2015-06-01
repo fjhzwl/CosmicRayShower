@@ -1,0 +1,2 @@
+/home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles/cosmicRayShower.dir
+/home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles/cosmics.dir

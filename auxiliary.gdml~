@@ -26,7 +26,7 @@
   <matrix name="detPos" coldim="3" values="earthRadius+0.5*detectorHeight 0 0"/>
   <position name="earthCenter" unit="km" x="0" y="0" z="0" />
   <position name="detectorCenter" unit="km" x="detPos[1]*sin(detPos[2])*cos(detPos[3])" y="detPos[1]*sin(detPos[2])*sin(detPos[3])" z="detPos[1]*cos(detPos[2])" />
- <!-- <rotation name="detectorRotation" unit="deg" values="0 -detPos[2] -detPos[3]"/>-->
+  <rotation name="detectorRotation" unit="deg" values="0 -detPos[2] -detPos[3]"/>
  </define>
 
  <materials>
@@ -190,7 +190,7 @@
    <physvol>
     <volumeref ref= "cloudChamberVol"/>
     <positionref ref="detectorCenter"/>
-    <!--<rotation ref="detectorRotation"/>-->
+    <rotation ref="detectorRotation"/>
    </physvol>
    
 <!--
