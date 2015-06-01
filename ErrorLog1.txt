@@ -1,0 +1,50 @@
+Scanning dependencies of target cosmicRayShower
+[ 25%] Building CXX object CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o
+In file included from /home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:49:0:
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/include/cosmicsPhysicsList.hh:10:24: error: ISO C++ forbids declaration of ‘cosmicsPhysicsList’ with no type [-fpermissive]
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/include/cosmicsPhysicsList.hh:11:24: error: expected class-name before ‘(’ token
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc: In function ‘int main(int, char**)’:
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:84:42: error: expected type-specifier before ‘cosmicsPhysicsList’
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:84:42: error: expected ‘)’ before ‘cosmicsPhysicsList’
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:84:60: error: no matching function for call to ‘G4RunManager::SetUserInitialization(int*)’
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:84:60: note: candidates are:
+In file included from /home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:40:0:
+/opt/geant4/include/Geant4/G4RunManager.hh:274:17: note: void G4RunManager::SetUserInitialization(G4VUserDetectorConstruction*)
+/opt/geant4/include/Geant4/G4RunManager.hh:274:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4VUserDetectorConstruction*’
+/opt/geant4/include/Geant4/G4RunManager.hh:276:17: note: void G4RunManager::SetUserInitialization(G4VUserPhysicsList*)
+/opt/geant4/include/Geant4/G4RunManager.hh:276:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4VUserPhysicsList*’
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:85:34: error: expected type-specifier before ‘cosmicsPrimaryGeneratorAction’
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:85:34: error: expected ‘)’ before ‘cosmicsPrimaryGeneratorAction’
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:85:63: error: no matching function for call to ‘G4RunManager::SetUserAction(int*)’
+/home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:85:63: note: candidates are:
+In file included from /home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:40:0:
+/opt/geant4/include/Geant4/G4RunManager.hh:281:17: note: void G4RunManager::SetUserAction(G4UserRunAction*)
+/opt/geant4/include/Geant4/G4RunManager.hh:281:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4UserRunAction*’
+/opt/geant4/include/Geant4/G4RunManager.hh:283:17: note: void G4RunManager::SetUserAction(G4VUserPrimaryGeneratorAction*)
+/opt/geant4/include/Geant4/G4RunManager.hh:283:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4VUserPrimaryGeneratorAction*’
+/opt/geant4/include/Geant4/G4RunManager.hh:285:17: note: void G4RunManager::SetUserAction(G4UserEventAction*)
+/opt/geant4/include/Geant4/G4RunManager.hh:285:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4UserEventAction*’
+/opt/geant4/include/Geant4/G4RunManager.hh:290:17: note: void G4RunManager::SetUserAction(G4UserStackingAction*)
+/opt/geant4/include/Geant4/G4RunManager.hh:290:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4UserStackingAction*’
+/opt/geant4/include/Geant4/G4RunManager.hh:295:17: note: void G4RunManager::SetUserAction(G4UserTrackingAction*)
+/opt/geant4/include/Geant4/G4RunManager.hh:295:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4UserTrackingAction*’
+/opt/geant4/include/Geant4/G4RunManager.hh:300:17: note: void G4RunManager::SetUserAction(G4UserSteppingAction*)
+/opt/geant4/include/Geant4/G4RunManager.hh:300:17: note:   no known conversion for argument 1 from ‘int*’ to ‘G4UserSteppingAction*’
+In file included from /opt/geant4/include/Geant4/G4PhysicalConstants.hh:27:0,
+                 from /opt/geant4/include/Geant4/globals.hh:70,
+                 from /opt/geant4/include/Geant4/G4RunManagerKernel.hh:65,
+                 from /opt/geant4/include/Geant4/G4RunManager.hh:89,
+                 from /home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:40:
+/opt/geant4/include/Geant4/CLHEP/Units/PhysicalConstants.h: At global scope:
+/opt/geant4/include/Geant4/CLHEP/Units/PhysicalConstants.h:79:21: warning: ‘CLHEP::electron_charge’ defined but not used [-Wunused-variable]
+In file included from /opt/geant4/include/Geant4/Randomize.hh:32:0,
+                 from /opt/geant4/include/Geant4/G4SteppingManager.hh:62,
+                 from /opt/geant4/include/Geant4/G4TrackingManager.hh:56,
+                 from /opt/geant4/include/Geant4/G4EventManager.hh:45,
+                 from /opt/geant4/include/Geant4/G4RunManagerKernel.hh:66,
+                 from /opt/geant4/include/Geant4/G4RunManager.hh:89,
+                 from /home/ryan/cosmics/CosmicsMain/CosmicRayShower/cosmicRayShower.cc:40:
+/opt/geant4/include/Geant4/CLHEP/Random/Randomize.h:59:12: warning: ‘CLHEP::HepRandomGenActive’ defined but not used [-Wunused-variable]
+make[2]: *** [CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o] Error 1
+make[1]: *** [CMakeFiles/cosmicRayShower.dir/all] Error 2
+make: *** [all] Error 2
