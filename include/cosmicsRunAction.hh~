@@ -1,4 +1,3 @@
-
 //
 // ********************************************************************
 // * License and Disclaimer                                           *
@@ -24,36 +23,42 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file persistency/gdml/cosmics/include/cosmicsPhysicsList.hh
-/// \brief Definition of the cosmicsPhysicsList class
+/// \file persistency/gdml/cosmics/include/cosmicsRunAction.hh
+/// \brief Definition of the cosmicsRunAction class
 //
 //
-// $Id: cosmicsPhysicsList.hh 69988 2013-05-21 12:36:24Z gcosmo $
+// $Id: cosmicsRunAction.hh 69987 2013-05-21 12:33:52Z gcosmo $
 //
+// Class cosmicsRunAction
 //
+// Simple run action class.
+//
+// ----------------------------------------------------------------------------
 
-#ifndef _cosmicsPHYSICSLIST_H_
-#define _cosmicsPHYSICSLIST_H_
+#ifndef cosmicsRunAction_h
+#define cosmicsRunAction_h 1
 
-#include "G4VUserPhysicsList.hh"
-#include "G4ParticleTypes.hh"
+#include <iostream>
+
 #include "globals.hh"
+#include "G4UserRunAction.hh"
 
-/// Physics list for the GDML senstive detector example
+class G4Run;
 
-class cosmicsPhysicsList : public G4VUserPhysicsList
+/// Run action for the GDML extension example
+
+class cosmicsRunAction : public G4UserRunAction
 {
   public:
-    cosmicsPhysicsList();
-   ~cosmicsPhysicsList();
 
-  protected:
+    cosmicsRunAction();
+   ~cosmicsRunAction();
 
-    virtual void ConstructParticle();
-    virtual void ConstructProcess();
-    virtual void SetCuts();
-    virtual void ConstructLeptons();
-    //virtual void ConstructEM();	
+    virtual void BeginOfRunAction(const G4Run*);
+    virtual void EndOfRunAction(const G4Run*);
+      
 };
+
+// ----------------------------------------------------------------------------
 
 #endif

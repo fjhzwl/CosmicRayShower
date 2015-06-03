@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o"
   "CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o"
   "CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o"
+  "CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o"
   "cosmicRayShower.pdb"
   "cosmicRayShower"
 )

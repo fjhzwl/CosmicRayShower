@@ -240,6 +240,30 @@ src/cosmicsPhysicsList.cc.s:
 	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.s
 .PHONY : src/cosmicsPhysicsList.cc.s
 
+src/cosmicsRunAction.o: src/cosmicsRunAction.cc.o
+.PHONY : src/cosmicsRunAction.o
+
+# target to build an object file
+src/cosmicsRunAction.cc.o:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o
+.PHONY : src/cosmicsRunAction.cc.o
+
+src/cosmicsRunAction.i: src/cosmicsRunAction.cc.i
+.PHONY : src/cosmicsRunAction.i
+
+# target to preprocess a source file
+src/cosmicsRunAction.cc.i:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i
+.PHONY : src/cosmicsRunAction.cc.i
+
+src/cosmicsRunAction.s: src/cosmicsRunAction.cc.s
+.PHONY : src/cosmicsRunAction.s
+
+# target to generate assembly for a file
+src/cosmicsRunAction.cc.s:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s
+.PHONY : src/cosmicsRunAction.cc.s
+
 src/cosmicsSensitiveDetector.o: src/cosmicsSensitiveDetector.cc.o
 .PHONY : src/cosmicsSensitiveDetector.o
 
@@ -287,6 +311,9 @@ help:
 	@echo "... src/cosmicsPhysicsList.o"
 	@echo "... src/cosmicsPhysicsList.i"
 	@echo "... src/cosmicsPhysicsList.s"
+	@echo "... src/cosmicsRunAction.o"
+	@echo "... src/cosmicsRunAction.i"
+	@echo "... src/cosmicsRunAction.s"
 	@echo "... src/cosmicsSensitiveDetector.o"
 	@echo "... src/cosmicsSensitiveDetector.i"
 	@echo "... src/cosmicsSensitiveDetector.s"

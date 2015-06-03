@@ -144,12 +144,36 @@ CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.provides: CMake
 
 CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o
 
+CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
+CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o: src/cosmicsRunAction.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsRunAction.cc
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsRunAction.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsRunAction.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires:
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides.build
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o
+
 # Object files for target cosmicRayShower
 cosmicRayShower_OBJECTS = \
 "CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o" \
 "CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o" \
 "CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o" \
-"CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o"
+"CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o"
 
 # External object files for target cosmicRayShower
 cosmicRayShower_EXTERNAL_OBJECTS =
@@ -158,6 +182,7 @@ cosmicRayShower: CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o
 cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o
 cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o
 cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o
+cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o
 cosmicRayShower: CMakeFiles/cosmicRayShower.dir/build.make
 cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4Tree.so
 cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4FR.so
@@ -236,6 +261,7 @@ CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/cosmicRa
 CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.requires
 CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.requires
 CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires
 .PHONY : CMakeFiles/cosmicRayShower.dir/requires
 
 CMakeFiles/cosmicRayShower.dir/clean:

@@ -1,4 +1,3 @@
-
 //
 // ********************************************************************
 // * License and Disclaimer                                           *
@@ -24,36 +23,69 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file persistency/gdml/cosmics/include/cosmicsPhysicsList.hh
-/// \brief Definition of the cosmicsPhysicsList class
+/// \file persistency/gdml/cosmics/src/cosmicsRunAction.cc
+/// \brief Implementation of the cosmicsRunAction class
 //
 //
-// $Id: cosmicsPhysicsList.hh 69988 2013-05-21 12:36:24Z gcosmo $
+// $Id: cosmicsRunAction.cc 68025 2013-03-13 13:43:46Z gcosmo $
 //
+// Class cosmicsRunAction implementation
 //
+// ----------------------------------------------------------------------------
 
-#ifndef _cosmicsPHYSICSLIST_H_
-#define _cosmicsPHYSICSLIST_H_
+#include "G4ios.hh"
+#include <iomanip>
 
-#include "G4VUserPhysicsList.hh"
-#include "G4ParticleTypes.hh"
 #include "globals.hh"
+#include "Randomize.hh"
+#include "cosmicsRunAction.hh"
 
-/// Physics list for the GDML senstive detector example
+#include "G4Run.hh"
+#include "G4UImanager.hh"
+#include "G4VVisManager.hh"
+#include "G4VisAttributes.hh"
 
-class cosmicsPhysicsList : public G4VUserPhysicsList
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+cosmicsRunAction::cosmicsRunAction()
+ : G4UserRunAction()
+{ 
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+cosmicsRunAction::~cosmicsRunAction()
 {
-  public:
-    cosmicsPhysicsList();
-   ~cosmicsPhysicsList();
+}
 
-  protected:
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-    virtual void ConstructParticle();
-    virtual void ConstructProcess();
-    virtual void SetCuts();
-    virtual void ConstructLeptons();
-    //virtual void ConstructEM();	
-};
+void cosmicsRunAction::BeginOfRunAction(const G4Run* aRun)
+{  
+  G4int id = aRun->GetRunID();
+  G4cout << "### Run " << id << " start" << G4endl;
+  
 
+#ifdef G4VIS_USE
+  G4UImanager* UI = G4UImanager::GetUIpointer();
+
+  G4VVisManager* pVVisManager = G4VVisManager::GetConcreteInstance();
+
+  if(pVVisManager)
+  {
+    UI->ApplyCommand("/vis/scene/notifyHandlers");
+  }
 #endif
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void cosmicsRunAction::EndOfRunAction(const G4Run*)
+{
+   G4cout << "RunAction: End of run actions are started" << G4endl;
+  
+#ifdef G4VIS_USE
+  if (G4VVisManager::GetConcreteInstance())
+    G4UImanager::GetUIpointer()->ApplyCommand("/vis/viewer/update");
+#endif
+}

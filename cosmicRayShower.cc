@@ -48,6 +48,7 @@
 #include "cosmicsDetectorConstruction.hh"
 #include "cosmicsPhysicsList.hh"
 #include "cosmicsSensitiveDetector.hh"
+#include "cosmicsRunAction.hh"
 
 #ifdef G4VIS_USE
 #include "G4VisExecutive.hh"
@@ -78,6 +79,7 @@ int main(int argc,char **argv)
 
    G4cout << "Hello1" << G4endl;
    G4RunManager* runManager = new G4RunManager;
+   
    G4cout << "Hello2" << G4endl;
    runManager->SetUserInitialization(new cosmicsDetectorConstruction(
                                      parser.GetWorldVolume()));
@@ -86,6 +88,7 @@ int main(int argc,char **argv)
    G4cout << "Hello4" << G4endl;
    runManager->SetUserAction(new cosmicsEventGenerator);
    G4cout << "Hello5" << G4endl;
+   runManager->SetUserAction(new cosmicsRunAction);
    runManager->Initialize();
    G4cout << "Hello6" << G4endl;
    G4UImanager* UImanager = G4UImanager::GetUIpointer();
@@ -159,6 +162,9 @@ int main(int argc,char **argv)
    //
    ////////////////////////////////////////////////////////////////////////
 
+
+
+
 #ifdef G4VIS_USE
      G4VisManager* visManager = new G4VisExecutive;
      visManager->Initialize();
@@ -175,13 +181,15 @@ int main(int argc,char **argv)
 #ifdef G4UI_USE
      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 #ifdef G4VIS_USE
-     UImanager->ApplyCommand("/control/execute vis.mac");     
+     UImanager->ApplyCommand("/control/execute run.mac");    
+      
 #endif
      ui->SessionStart();
      delete ui;
 #endif
    }
-
+   
+   
 #ifdef G4VIS_USE
    delete visManager;
 #endif
