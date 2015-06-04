@@ -46,6 +46,6 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/cosmic.dir/DependInfo.cmake"
   "CMakeFiles/cosmicRayShower.dir/DependInfo.cmake"
-  "CMakeFiles/cosmics.dir/DependInfo.cmake"
   )

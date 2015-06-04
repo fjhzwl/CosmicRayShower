@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sakib/remoll/cosmic/CosmicRayShower
+CMAKE_SOURCE_DIR = /home/sakib/remoll/cosmic/CosmicRayShowerv1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sakib/remoll/cosmic/CosmicRayShower
+CMAKE_BINARY_DIR = /home/sakib/remoll/cosmic/CosmicRayShowerv1
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cosmicRayShower.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/cosmicRayShower.dir/flags.make
 
 CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
 CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o: cosmicRayShower.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShower/cosmicRayShower.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShowerv1/cosmicRayShower.cc
 
 CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShower/cosmicRayShower.cc > CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShowerv1/cosmicRayShower.cc > CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.i
 
 CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShower/cosmicRayShower.cc -o CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShowerv1/cosmicRayShower.cc -o CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.s
 
 CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o.requires:
 .PHONY : CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o.requires
@@ -75,114 +75,139 @@ CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o.provides: CMakeFiles/cosmicR
 
 CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
-CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o: src/cosmicsPhysicsList.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsPhysicsList.cc
+CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
+CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o: src/cosmicPrimaryGeneratorAction.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicPrimaryGeneratorAction.cc
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsPhysicsList.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.i
+CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicPrimaryGeneratorAction.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.i
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsPhysicsList.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.s
+CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicPrimaryGeneratorAction.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.s
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.requires:
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.requires:
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.requires
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.requires
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.provides.build
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.provides
+CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.requires
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.provides.build
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.provides
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o
+CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
-CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o: src/cosmicsEventGenerator.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsEventGenerator.cc
+CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
+CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o: src/cosmicDetectorConstruction.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicDetectorConstruction.cc
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsEventGenerator.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.i
+CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicDetectorConstruction.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.i
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsEventGenerator.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.s
+CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicDetectorConstruction.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.s
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.requires:
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.requires:
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.requires
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.requires
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.provides.build
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.provides
+CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.requires
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.provides.build
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.provides
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o
+CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
-CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o: src/cosmicsSensitiveDetector.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsSensitiveDetector.cc
+CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
+CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o: src/cosmicSteppingAction.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicSteppingAction.cc
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsSensitiveDetector.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.i
+CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicSteppingAction.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.i
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsSensitiveDetector.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.s
+CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicSteppingAction.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.s
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.requires:
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.requires:
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.requires
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.requires
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.provides.build
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.provides
+CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.requires
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.provides.build
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.provides
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o
+CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
-CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o: src/cosmicsRunAction.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsRunAction.cc
+CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
+CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o: src/cosmicRunAction.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicRunAction.cc
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsRunAction.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i
+CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicRunAction.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.i
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShower/src/cosmicsRunAction.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s
+CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicRunAction.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.s
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires:
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.requires:
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.requires
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides.build
-.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides
+CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.requires
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.provides.build
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.provides
 
-CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o
+CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o: CMakeFiles/cosmicRayShower.dir/flags.make
+CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o: src/cosmicEventAction.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o -c /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicEventAction.cc
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicEventAction.cc > CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.i
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sakib/remoll/cosmic/CosmicRayShowerv1/src/cosmicEventAction.cc -o CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.s
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.requires:
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.requires
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.provides: CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.requires
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.provides.build
+.PHONY : CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.provides
+
+CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.provides.build: CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o
 
 # Object files for target cosmicRayShower
 cosmicRayShower_OBJECTS = \
 "CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o" \
-"CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o" \
-"CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o" \
-"CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o" \
-"CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o"
+"CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o"
 
 # External object files for target cosmicRayShower
 cosmicRayShower_EXTERNAL_OBJECTS =
 
 cosmicRayShower: CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o
-cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o
-cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o
-cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o
-cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o
+cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o
+cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o
+cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o
+cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o
+cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o
 cosmicRayShower: CMakeFiles/cosmicRayShower.dir/build.make
 cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4Tree.so
 cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4FR.so
@@ -257,11 +282,104 @@ cosmicRayShower: CMakeFiles/cosmicRayShower.dir/link.txt
 CMakeFiles/cosmicRayShower.dir/build: cosmicRayShower
 .PHONY : CMakeFiles/cosmicRayShower.dir/build
 
+# Object files for target cosmicRayShower
+cosmicRayShower_OBJECTS = \
+"CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o" \
+"CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o"
+
+# External object files for target cosmicRayShower
+cosmicRayShower_EXTERNAL_OBJECTS =
+
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/build.make
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4Tree.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4FR.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4GMocren.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4visHepRep.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4RayTracer.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4VRML.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4OpenGL.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4gl2ps.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4OpenInventor.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4vis_management.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4modeling.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4interfaces.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4persistency.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4analysis.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4error_propagation.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4readout.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4physicslists.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4run.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4event.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4tracking.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4parmodels.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4processes.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4digits_hits.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4track.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4particles.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4geometry.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4materials.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4graphics_reps.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4intercoms.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4global.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4zlib.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4FR.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libXmu.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libQtOpenGL.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4gl2ps.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4zlib.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4vis_management.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4modeling.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libQtGui.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libQtCore.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/local/lib/libCoin.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libSM.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libICE.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libX11.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libXext.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libGLU.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libGL.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/local/lib/libSoXt.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libXm.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libXpm.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libxerces-c.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4run.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4event.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4tracking.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4processes.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /usr/lib/x86_64-linux-gnu/libexpat.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4digits_hits.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4track.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4particles.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4geometry.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4materials.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4graphics_reps.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4intercoms.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/geant/geant4.9.6.p03-install/lib/libG4global.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: /home/sakib/CLHEP/2.1.4.1/CLHEP-install/lib/libCLHEP.so
+CMakeFiles/CMakeRelink.dir/cosmicRayShower: CMakeFiles/cosmicRayShower.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable CMakeFiles/CMakeRelink.dir/cosmicRayShower"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cosmicRayShower.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+CMakeFiles/cosmicRayShower.dir/preinstall: CMakeFiles/CMakeRelink.dir/cosmicRayShower
+.PHONY : CMakeFiles/cosmicRayShower.dir/preinstall
+
 CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.o.requires
-CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o.requires
-CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o.requires
-CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o.requires
-CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o.requires
+CMakeFiles/cosmicRayShower.dir/requires: CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o.requires
 .PHONY : CMakeFiles/cosmicRayShower.dir/requires
 
 CMakeFiles/cosmicRayShower.dir/clean:
@@ -269,6 +387,6 @@ CMakeFiles/cosmicRayShower.dir/clean:
 .PHONY : CMakeFiles/cosmicRayShower.dir/clean
 
 CMakeFiles/cosmicRayShower.dir/depend:
-	cd /home/sakib/remoll/cosmic/CosmicRayShower && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles/cosmicRayShower.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sakib/remoll/cosmic/CosmicRayShowerv1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles/cosmicRayShower.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cosmicRayShower.dir/depend
 

@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sakib/remoll/cosmic/CosmicRayShower
+CMAKE_SOURCE_DIR = /home/sakib/remoll/cosmic/CosmicRayShowerv1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sakib/remoll/cosmic/CosmicRayShower
+CMAKE_BINARY_DIR = /home/sakib/remoll/cosmic/CosmicRayShowerv1
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -82,16 +82,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -113,9 +103,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,6 +133,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cosmic
+
+# Build rule for target.
+cosmic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cosmic
+.PHONY : cosmic
+
+# fast build rule for target.
+cosmic/fast:
+	$(MAKE) -f CMakeFiles/cosmic.dir/build.make CMakeFiles/cosmic.dir/build
+.PHONY : cosmic/fast
+
+#=============================================================================
 # Target rules for targets named cosmicRayShower
 
 # Build rule for target.
@@ -155,18 +158,10 @@ cosmicRayShower/fast:
 	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/build
 .PHONY : cosmicRayShower/fast
 
-#=============================================================================
-# Target rules for targets named cosmics
-
-# Build rule for target.
-cosmics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cosmics
-.PHONY : cosmics
-
-# fast build rule for target.
-cosmics/fast:
-	$(MAKE) -f CMakeFiles/cosmics.dir/build.make CMakeFiles/cosmics.dir/build
-.PHONY : cosmics/fast
+# Manual pre-install relink rule for target.
+cosmicRayShower/preinstall:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/preinstall
+.PHONY : cosmicRayShower/preinstall
 
 cosmicRayShower.o: cosmicRayShower.cc.o
 .PHONY : cosmicRayShower.o
@@ -192,101 +187,125 @@ cosmicRayShower.cc.s:
 	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/cosmicRayShower.cc.s
 .PHONY : cosmicRayShower.cc.s
 
-src/cosmicsEventGenerator.o: src/cosmicsEventGenerator.cc.o
-.PHONY : src/cosmicsEventGenerator.o
+src/cosmicDetectorConstruction.o: src/cosmicDetectorConstruction.cc.o
+.PHONY : src/cosmicDetectorConstruction.o
 
 # target to build an object file
-src/cosmicsEventGenerator.cc.o:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.o
-.PHONY : src/cosmicsEventGenerator.cc.o
+src/cosmicDetectorConstruction.cc.o:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.o
+.PHONY : src/cosmicDetectorConstruction.cc.o
 
-src/cosmicsEventGenerator.i: src/cosmicsEventGenerator.cc.i
-.PHONY : src/cosmicsEventGenerator.i
+src/cosmicDetectorConstruction.i: src/cosmicDetectorConstruction.cc.i
+.PHONY : src/cosmicDetectorConstruction.i
 
 # target to preprocess a source file
-src/cosmicsEventGenerator.cc.i:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.i
-.PHONY : src/cosmicsEventGenerator.cc.i
+src/cosmicDetectorConstruction.cc.i:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.i
+.PHONY : src/cosmicDetectorConstruction.cc.i
 
-src/cosmicsEventGenerator.s: src/cosmicsEventGenerator.cc.s
-.PHONY : src/cosmicsEventGenerator.s
+src/cosmicDetectorConstruction.s: src/cosmicDetectorConstruction.cc.s
+.PHONY : src/cosmicDetectorConstruction.s
 
 # target to generate assembly for a file
-src/cosmicsEventGenerator.cc.s:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsEventGenerator.cc.s
-.PHONY : src/cosmicsEventGenerator.cc.s
+src/cosmicDetectorConstruction.cc.s:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicDetectorConstruction.cc.s
+.PHONY : src/cosmicDetectorConstruction.cc.s
 
-src/cosmicsPhysicsList.o: src/cosmicsPhysicsList.cc.o
-.PHONY : src/cosmicsPhysicsList.o
+src/cosmicEventAction.o: src/cosmicEventAction.cc.o
+.PHONY : src/cosmicEventAction.o
 
 # target to build an object file
-src/cosmicsPhysicsList.cc.o:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.o
-.PHONY : src/cosmicsPhysicsList.cc.o
+src/cosmicEventAction.cc.o:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.o
+.PHONY : src/cosmicEventAction.cc.o
 
-src/cosmicsPhysicsList.i: src/cosmicsPhysicsList.cc.i
-.PHONY : src/cosmicsPhysicsList.i
+src/cosmicEventAction.i: src/cosmicEventAction.cc.i
+.PHONY : src/cosmicEventAction.i
 
 # target to preprocess a source file
-src/cosmicsPhysicsList.cc.i:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.i
-.PHONY : src/cosmicsPhysicsList.cc.i
+src/cosmicEventAction.cc.i:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.i
+.PHONY : src/cosmicEventAction.cc.i
 
-src/cosmicsPhysicsList.s: src/cosmicsPhysicsList.cc.s
-.PHONY : src/cosmicsPhysicsList.s
+src/cosmicEventAction.s: src/cosmicEventAction.cc.s
+.PHONY : src/cosmicEventAction.s
 
 # target to generate assembly for a file
-src/cosmicsPhysicsList.cc.s:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsPhysicsList.cc.s
-.PHONY : src/cosmicsPhysicsList.cc.s
+src/cosmicEventAction.cc.s:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicEventAction.cc.s
+.PHONY : src/cosmicEventAction.cc.s
 
-src/cosmicsRunAction.o: src/cosmicsRunAction.cc.o
-.PHONY : src/cosmicsRunAction.o
+src/cosmicPrimaryGeneratorAction.o: src/cosmicPrimaryGeneratorAction.cc.o
+.PHONY : src/cosmicPrimaryGeneratorAction.o
 
 # target to build an object file
-src/cosmicsRunAction.cc.o:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.o
-.PHONY : src/cosmicsRunAction.cc.o
+src/cosmicPrimaryGeneratorAction.cc.o:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.o
+.PHONY : src/cosmicPrimaryGeneratorAction.cc.o
 
-src/cosmicsRunAction.i: src/cosmicsRunAction.cc.i
-.PHONY : src/cosmicsRunAction.i
+src/cosmicPrimaryGeneratorAction.i: src/cosmicPrimaryGeneratorAction.cc.i
+.PHONY : src/cosmicPrimaryGeneratorAction.i
 
 # target to preprocess a source file
-src/cosmicsRunAction.cc.i:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.i
-.PHONY : src/cosmicsRunAction.cc.i
+src/cosmicPrimaryGeneratorAction.cc.i:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.i
+.PHONY : src/cosmicPrimaryGeneratorAction.cc.i
 
-src/cosmicsRunAction.s: src/cosmicsRunAction.cc.s
-.PHONY : src/cosmicsRunAction.s
+src/cosmicPrimaryGeneratorAction.s: src/cosmicPrimaryGeneratorAction.cc.s
+.PHONY : src/cosmicPrimaryGeneratorAction.s
 
 # target to generate assembly for a file
-src/cosmicsRunAction.cc.s:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsRunAction.cc.s
-.PHONY : src/cosmicsRunAction.cc.s
+src/cosmicPrimaryGeneratorAction.cc.s:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicPrimaryGeneratorAction.cc.s
+.PHONY : src/cosmicPrimaryGeneratorAction.cc.s
 
-src/cosmicsSensitiveDetector.o: src/cosmicsSensitiveDetector.cc.o
-.PHONY : src/cosmicsSensitiveDetector.o
+src/cosmicRunAction.o: src/cosmicRunAction.cc.o
+.PHONY : src/cosmicRunAction.o
 
 # target to build an object file
-src/cosmicsSensitiveDetector.cc.o:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.o
-.PHONY : src/cosmicsSensitiveDetector.cc.o
+src/cosmicRunAction.cc.o:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.o
+.PHONY : src/cosmicRunAction.cc.o
 
-src/cosmicsSensitiveDetector.i: src/cosmicsSensitiveDetector.cc.i
-.PHONY : src/cosmicsSensitiveDetector.i
+src/cosmicRunAction.i: src/cosmicRunAction.cc.i
+.PHONY : src/cosmicRunAction.i
 
 # target to preprocess a source file
-src/cosmicsSensitiveDetector.cc.i:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.i
-.PHONY : src/cosmicsSensitiveDetector.cc.i
+src/cosmicRunAction.cc.i:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.i
+.PHONY : src/cosmicRunAction.cc.i
 
-src/cosmicsSensitiveDetector.s: src/cosmicsSensitiveDetector.cc.s
-.PHONY : src/cosmicsSensitiveDetector.s
+src/cosmicRunAction.s: src/cosmicRunAction.cc.s
+.PHONY : src/cosmicRunAction.s
 
 # target to generate assembly for a file
-src/cosmicsSensitiveDetector.cc.s:
-	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicsSensitiveDetector.cc.s
-.PHONY : src/cosmicsSensitiveDetector.cc.s
+src/cosmicRunAction.cc.s:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicRunAction.cc.s
+.PHONY : src/cosmicRunAction.cc.s
+
+src/cosmicSteppingAction.o: src/cosmicSteppingAction.cc.o
+.PHONY : src/cosmicSteppingAction.o
+
+# target to build an object file
+src/cosmicSteppingAction.cc.o:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.o
+.PHONY : src/cosmicSteppingAction.cc.o
+
+src/cosmicSteppingAction.i: src/cosmicSteppingAction.cc.i
+.PHONY : src/cosmicSteppingAction.i
+
+# target to preprocess a source file
+src/cosmicSteppingAction.cc.i:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.i
+.PHONY : src/cosmicSteppingAction.cc.i
+
+src/cosmicSteppingAction.s: src/cosmicSteppingAction.cc.s
+.PHONY : src/cosmicSteppingAction.s
+
+# target to generate assembly for a file
+src/cosmicSteppingAction.cc.s:
+	$(MAKE) -f CMakeFiles/cosmicRayShower.dir/build.make CMakeFiles/cosmicRayShower.dir/src/cosmicSteppingAction.cc.s
+.PHONY : src/cosmicSteppingAction.cc.s
 
 # Help Target
 help:
@@ -294,29 +313,31 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... cosmic"
 	@echo "... cosmicRayShower"
-	@echo "... cosmics"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... cosmicRayShower.o"
 	@echo "... cosmicRayShower.i"
 	@echo "... cosmicRayShower.s"
-	@echo "... src/cosmicsEventGenerator.o"
-	@echo "... src/cosmicsEventGenerator.i"
-	@echo "... src/cosmicsEventGenerator.s"
-	@echo "... src/cosmicsPhysicsList.o"
-	@echo "... src/cosmicsPhysicsList.i"
-	@echo "... src/cosmicsPhysicsList.s"
-	@echo "... src/cosmicsRunAction.o"
-	@echo "... src/cosmicsRunAction.i"
-	@echo "... src/cosmicsRunAction.s"
-	@echo "... src/cosmicsSensitiveDetector.o"
-	@echo "... src/cosmicsSensitiveDetector.i"
-	@echo "... src/cosmicsSensitiveDetector.s"
+	@echo "... src/cosmicDetectorConstruction.o"
+	@echo "... src/cosmicDetectorConstruction.i"
+	@echo "... src/cosmicDetectorConstruction.s"
+	@echo "... src/cosmicEventAction.o"
+	@echo "... src/cosmicEventAction.i"
+	@echo "... src/cosmicEventAction.s"
+	@echo "... src/cosmicPrimaryGeneratorAction.o"
+	@echo "... src/cosmicPrimaryGeneratorAction.i"
+	@echo "... src/cosmicPrimaryGeneratorAction.s"
+	@echo "... src/cosmicRunAction.o"
+	@echo "... src/cosmicRunAction.i"
+	@echo "... src/cosmicRunAction.s"
+	@echo "... src/cosmicSteppingAction.o"
+	@echo "... src/cosmicSteppingAction.i"
+	@echo "... src/cosmicSteppingAction.s"
 .PHONY : help
 
 

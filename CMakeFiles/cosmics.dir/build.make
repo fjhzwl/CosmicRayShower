@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sakib/remoll/cosmic/CosmicRayShower
+CMAKE_SOURCE_DIR = /home/sakib/remoll/cosmic/CosmicRayShowerv1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sakib/remoll/cosmic/CosmicRayShower
+CMAKE_BINARY_DIR = /home/sakib/remoll/cosmic/CosmicRayShowerv1
 
 # Utility rule file for cosmics.
 
@@ -63,6 +63,6 @@ CMakeFiles/cosmics.dir/clean:
 .PHONY : CMakeFiles/cosmics.dir/clean
 
 CMakeFiles/cosmics.dir/depend:
-	cd /home/sakib/remoll/cosmic/CosmicRayShower && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower /home/sakib/remoll/cosmic/CosmicRayShower/CMakeFiles/cosmics.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sakib/remoll/cosmic/CosmicRayShowerv1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1 /home/sakib/remoll/cosmic/CosmicRayShowerv1/CMakeFiles/cosmics.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cosmics.dir/depend
 

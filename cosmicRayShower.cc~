@@ -49,6 +49,8 @@
 #include "cosmicsPhysicsList.hh"
 #include "cosmicsSensitiveDetector.hh"
 #include "cosmicsRunAction.hh"
+#include "cosmicsEventAction.hh"
+#include "cosmicsSteppingAction.hh"
 
 #ifdef G4VIS_USE
 #include "G4VisExecutive.hh"
@@ -88,7 +90,14 @@ int main(int argc,char **argv)
    G4cout << "Hello4" << G4endl;
    runManager->SetUserAction(new cosmicsEventGenerator);
    G4cout << "Hello5" << G4endl;
-   runManager->SetUserAction(new cosmicsRunAction);
+   // Stepping action
+  runManager->SetUserAction(new cosmicsSteppingAction());     
+
+  // Event action
+  runManager->SetUserAction(new cosmicsEventAction());
+
+  // Run action
+  runManager->SetUserAction(new cosmicsRunAction());
    runManager->Initialize();
    G4cout << "Hello6" << G4endl;
    G4UImanager* UImanager = G4UImanager::GetUIpointer();
@@ -182,7 +191,7 @@ int main(int argc,char **argv)
      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 #ifdef G4VIS_USE
      UImanager->ApplyCommand("/control/execute run.mac");    
-     runManager->BeamOn(10); 
+      
 #endif
      ui->SessionStart();
      delete ui;

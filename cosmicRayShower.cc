@@ -23,32 +23,21 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file persistency/gdml/cosmics/gdml_det.cc
-/// \brief Main program of the persistency/gdml/cosmics example
+// $Id$
 //
-//
-// $Id: gdml_det.cc 68025 2013-03-13 13:43:46Z gcosmo $
-//
-//
-// --------------------------------------------------------------
-//      GEANT 4 - gdml_det
-//
-// --------------------------------------------------------------
+/// \file examplecosmic.cc
+/// \brief Main program of the cosmic example
 
-#include <vector>
+#include "cosmicDetectorConstruction.hh"
+#include "cosmicPrimaryGeneratorAction.hh"
+#include "cosmicRunAction.hh"
+#include "cosmicEventAction.hh"
+#include "cosmicSteppingAction.hh"
 
 #include "G4RunManager.hh"
 #include "G4UImanager.hh"
-
-#include "G4LogicalVolumeStore.hh"
-#include "G4TransportationManager.hh"
-#include "G4SDManager.hh"
-
-#include "cosmicsEventGenerator.hh"
-#include "cosmicsDetectorConstruction.hh"
-#include "cosmicsPhysicsList.hh"
-#include "cosmicsSensitiveDetector.hh"
-#include "cosmicsRunAction.hh"
+#include "QBBC.hh"
+#include "FTFP_BERT.hh"
 
 #ifdef G4VIS_USE
 #include "G4VisExecutive.hh"
@@ -58,142 +47,90 @@
 #include "G4UIExecutive.hh"
 #endif
 
-#include "G4GDMLParser.hh"
+#include "Randomize.hh"
 
-int main(int argc,char **argv)
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+int main(int argc,char** argv)
 {
-   G4cout << G4endl;
-   G4cout << "Usage: gdml_det <intput_gdml_file:mandatory>"
-          << G4endl;
-   G4cout << G4endl;
+  // Choose the Random engine
+  //
+  CLHEP::HepRandom::setTheEngine(new CLHEP::RanecuEngine);
+  
+  // Construct the default run manager
+  //
+  G4RunManager * runManager = new G4RunManager;
 
-   if (argc<2)
-   {
-      G4cout << "Error! Mandatory input file is not specified!" << G4endl;
-      G4cout << G4endl;
-      return -1;
-   }
-
-   G4GDMLParser parser;
-   parser.Read(argv[1]);
-
-   G4cout << "Hello1" << G4endl;
-   G4RunManager* runManager = new G4RunManager;
-   
-   G4cout << "Hello2" << G4endl;
-   runManager->SetUserInitialization(new cosmicsDetectorConstruction(
-                                     parser.GetWorldVolume()));
-   G4cout << "Hello3" << G4endl;
-   runManager->SetUserInitialization(new cosmicsPhysicsList);
-   G4cout << "Hello4" << G4endl;
-   runManager->SetUserAction(new cosmicsEventGenerator);
-   G4cout << "Hello5" << G4endl;
-   runManager->SetUserAction(new cosmicsRunAction);
-   runManager->Initialize();
-   G4cout << "Hello6" << G4endl;
-   G4UImanager* UImanager = G4UImanager::GetUIpointer();
-
-   //------------------------------------------------ 
-   // Sensitive detectors
-   //------------------------------------------------ 
-   
-   G4SDManager* SDman = G4SDManager::GetSDMpointer();
-   
-   G4String trackerChamberSDname = "Tracker";
-   cosmicsSensitiveDetector* aTrackerSD = new cosmicsSensitiveDetector(trackerChamberSDname);
-   SDman->AddNewDetector( aTrackerSD );
- 
-   ///////////////////////////////////////////////////////////////////////
-   //
-   // Example how to retrieve Auxiliary Information for sensitive detector
-   //
-   const G4GDMLAuxMapType* auxmap = parser.GetAuxMap();
-   std::cout << "Found " << auxmap->size()
-             << " volume(s) with auxiliary information."
-             << G4endl << G4endl;
-   for(G4GDMLAuxMapType::const_iterator iter=auxmap->begin();
-       iter!=auxmap->end(); iter++) 
-   {
-     G4cout << "Volume " << ((*iter).first)->GetName()
-            << " has the following list of auxiliary information: "
-            << G4endl << G4endl;
-     for (G4GDMLAuxListType::const_iterator vit=(*iter).second.begin();
-          vit!=(*iter).second.end(); vit++)
-     {
-       std::cout << "--> Type: " << (*vit).type
-                 << " Value: " << (*vit).value << std::endl;
-     }
-   }
-   G4cout << G4endl;
-
-   // The same as above, but now we are looking for
-   // sensitive detectors setting them for the volumes
-
-   for(G4GDMLAuxMapType::const_iterator iter=auxmap->begin();
-       iter!=auxmap->end(); iter++) 
-   {
-     G4cout << "Volume " << ((*iter).first)->GetName()
-            << " has the following list of auxiliary information: "
-            << G4endl << G4endl;
-     for (G4GDMLAuxListType::const_iterator vit=(*iter).second.begin();
-          vit!=(*iter).second.end();vit++)
-     {
-       if ((*vit).type=="SensDet")
-       {
-         G4cout << "Attaching sensitive detector " << (*vit).value
-                << " to volume " << ((*iter).first)->GetName()
-                <<  G4endl << G4endl;
-
-         G4VSensitiveDetector* mydet = SDman->FindSensitiveDetector((*vit).value);
-         if(mydet) 
-         {
-           G4LogicalVolume* myvol = (*iter).first;
-           myvol->SetSensitiveDetector(mydet);
-         }
-         else
-         {
-           G4cout << (*vit).value << " detector not found" << G4endl;
-         }
-       }
-     }
-   }
-   //
-   // End of Auxiliary Information block
-   //
-   ////////////////////////////////////////////////////////////////////////
-
-
-
-
+  // Set mandatory initialization classes
+  //
+  // Detector construction
+  runManager->SetUserInitialization(new cosmicDetectorConstruction());
+  G4cout<<"Hello"<<G4endl;
+  // Physics list
+  G4VModularPhysicsList* physicsList = new FTFP_BERT;
+  physicsList->SetVerboseLevel(1);
+  runManager->SetUserInitialization(physicsList);
+   G4cout<<"Hello"<<G4endl; 
+  // Primary generator action
+  runManager->SetUserAction(new cosmicPrimaryGeneratorAction());
+ G4cout<<"Hello"<<G4endl;
+  // Set user action classes
+  //
+  // Stepping action
+  runManager->SetUserAction(new cosmicSteppingAction());     
+G4cout<<"Hello"<<G4endl;
+  // Event action
+  runManager->SetUserAction(new cosmicEventAction());
+G4cout<<"Hello"<<G4endl;
+  // Run action
+  runManager->SetUserAction(new cosmicRunAction());
+ G4cout<<"Hello"<<G4endl;    
+  // Initialize G4 kernel
+  //
+  runManager->Initialize();
+  
 #ifdef G4VIS_USE
-     G4VisManager* visManager = new G4VisExecutive;
-     visManager->Initialize();
+  // Initialize visualization
+  G4VisManager* visManager = new G4VisExecutive;
+  // G4VisExecutive can take a verbosity argument - see /vis/verbose guidance.
+  // G4VisManager* visManager = new G4VisExecutive("Quiet");
+  visManager->Initialize();
 #endif
 
-   if (argc==3)   // batch mode  
-   {
-     G4String command = "/control/execute ";
-     G4String fileName = argv[2];
-     UImanager->ApplyCommand(command+fileName);
-   }
-   else           // interactive mode
-   {
+  // Get the pointer to the User Interface manager
+  G4UImanager* UImanager = G4UImanager::GetUIpointer();
+
+  if (argc!=1) {
+    // batch mode
+    G4String command = "/control/execute ";
+    G4String fileName = argv[1];
+    UImanager->ApplyCommand(command+fileName);
+  }
+  else {
+    // interactive mode : define UI session
 #ifdef G4UI_USE
-     G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+    G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 #ifdef G4VIS_USE
-     UImanager->ApplyCommand("/control/execute run.mac");    
-      
+    UImanager->ApplyCommand("/control/execute init_vis.mac"); 
+#else
+    UImanager->ApplyCommand("/control/execute init.mac"); 
 #endif
-     ui->SessionStart();
-     delete ui;
+    ui->SessionStart();
+    delete ui;
 #endif
-   }
-   
-   
-#ifdef G4VIS_USE
-   delete visManager;
-#endif
-   delete runManager;
+  }
 
-   return 0;
+  // Job termination
+  // Free the store: user actions, physics_list and detector_description are
+  // owned and deleted by the run manager, so they should not be deleted 
+  // in the main() program !
+  
+#ifdef G4VIS_USE
+  delete visManager;
+#endif
+  delete runManager;
+
+  return 0;
 }
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo.....
